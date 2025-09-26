@@ -10,5 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface CustomerRepository extends JpaRepository<EntityCustomer, UUID>{
 
     Optional<EntityCustomer> findByEmail(String email);
+    Optional<EntityCustomer> findByName(String name);
     
 }

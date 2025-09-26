@@ -24,6 +24,7 @@ public class CreateUseCaseCustomer {
         });
 
         EntityCustomer entity = CustomerMapper.tCustomer(customerDTO);
+        this.customerRepository.save(entity);
     }
 
 

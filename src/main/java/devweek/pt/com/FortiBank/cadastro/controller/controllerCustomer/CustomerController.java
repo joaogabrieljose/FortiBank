@@ -21,8 +21,14 @@ public class CustomerController {
 
     @PostMapping("/")
     public String create (@RequestBody CustomerDTO dto){
-        this.useCase.execute(dto);
-        return "Cliente registado...";
+
+        try {
+            this.useCase.execute(dto);
+            return "SUCESSO...";
+            
+        } catch (Exception e) {
+            return "email expirado / usa outro email";
+        }
+        
     }
-    
 }

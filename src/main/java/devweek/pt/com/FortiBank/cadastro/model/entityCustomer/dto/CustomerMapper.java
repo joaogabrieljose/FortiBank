@@ -10,7 +10,7 @@ public class CustomerMapper {
         entity.setName(dto.name());
         entity.setEmail(dto.email());
         entity.setSaldoInicio(dto.saldoInicio());
-
+        entity.setPassword(dto.password());
         return entity;
     }
     
