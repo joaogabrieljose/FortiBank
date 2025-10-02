@@ -10,7 +10,7 @@ import devweek.pt.com.FortiBank.cadastro.model.entityCustomer.dto.CustomerDTO;
 import devweek.pt.com.FortiBank.cadastro.useCase.useCaseCustomer.CreateUseCaseCustomer;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/auth")
 public class CustomerController {
 
     private CreateUseCaseCustomer useCase;
@@ -19,7 +19,7 @@ public class CustomerController {
         this.useCase = useCase;
     }
 
-    @PostMapping("/")
+    @PostMapping("/register")
     public String create (@RequestBody CustomerDTO dto){
 
         try {

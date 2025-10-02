@@ -31,7 +31,7 @@ public class SecurityConf {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/customer/**").permitAll()
+                .requestMatchers(HttpMethod.POST, "/auth/register**").permitAll()
                 .anyRequest().authenticated())
             .httpBasic(Customizer.withDefaults());
         return http.build();
