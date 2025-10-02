@@ -29,10 +29,10 @@ public class EntityCustomer {
     private double saldoInicio;
     private String password;
 
-    @OneToMany(mappedBy = "sender_id")
+    @OneToMany(mappedBy = "sender")
     private List<Transactions> sentTransactions;
-    
-    @OneToMany(mappedBy = "recipient_id")
+
+    @OneToMany(mappedBy = "recipient")
     private List<Transactions> recipientTransactions;
 
 }
